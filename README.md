@@ -1,5 +1,7 @@
 # Fibonacci Calculator 🧮
-Fibonacci calculator in Java 17. The Big O notation is **O(1)** if requesting a single digit, otherwise the Big O notation is **O(n)**.
+Fibonacci calculator in Java 17. The Big O notation is **O(1)** if requesting a single digit, otherwise the Big O notation is **O(n)**.  
+
+**Click <a href="https://github.com/BastianAsmussen/Fibonacci/blob/main/out/artifacts/Fibonacci_jar/Fibonacci.jar?raw=true">here</a> to download the jar.**
 
 <hr/>
 
