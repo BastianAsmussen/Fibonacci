@@ -1,8 +1,7 @@
 package tech.asmussen;
 
-import java.math.BigInteger;
-import java.text.DecimalFormat;
 import java.util.Scanner;
+import java.math.BigInteger;
 
 public class Main {
 
@@ -14,8 +13,9 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        boolean validNumber = false;
         boolean sequence = args.length > 0 && args[0].equalsIgnoreCase("--sequence");
+
+        boolean validNumber = false;
 
         long n = 0;
 
@@ -27,6 +27,7 @@ public class Main {
             try {
 
                 n = Long.parseLong(rawInput);
+                
                 validNumber = true;
 
                 scanner.close();
@@ -40,8 +41,6 @@ public class Main {
 
         System.out.println();
 
-        DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
-
         fibonacciCache = new BigInteger[(int) n + 1];
 
         final long START_TIME = System.currentTimeMillis();
@@ -54,10 +53,10 @@ public class Main {
         StringBuilder fibonacciValue = new StringBuilder();
 
         if (sequence) {
-            
+
             for (long i = 0; i < n; i++) {
 
-                fibonacciValue.append(decimalFormat.format(fibonacci(i))).append(", ");
+                fibonacciValue.append(fibonacci(i)).append(", ");
             }
 
             fibonacciValue.delete(fibonacciValue.length() - 2, fibonacciValue.length());
@@ -66,7 +65,7 @@ public class Main {
 
             fibonacciValue.append(fibonacci(n));
         }
-        
+
         System.out.printf(((sequence) ? "Fibonacci Sequence:" : "Fibonacci Number:") + " %s.%n", fibonacciValue);
         System.out.printf("Time: %s second(s) and %s millisecond(s).%n", TIME[0], TIME[1]);
     }
