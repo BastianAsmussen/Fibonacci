@@ -51,26 +51,26 @@ public class Main {
         final double END_TIME = (System.currentTimeMillis() - START_TIME) / 1_000D;
         final String[] TIME = String.valueOf(END_TIME).split("\\.");
 
-        StringBuilder fibonacciSequence = new StringBuilder();
+        StringBuilder fibonacciValue = new StringBuilder();
 
         if (sequence) {
-
+            
             for (long i = 0; i < n; i++) {
 
-                fibonacciSequence.append(decimalFormat.format(fibonacci(i))).append(", ");
+                fibonacciValue.append(decimalFormat.format(fibonacci(i))).append(", ");
             }
 
-            fibonacciSequence.delete(fibonacciSequence.length() - 2, fibonacciSequence.length());
+            fibonacciValue.delete(fibonacciValue.length() - 2, fibonacciValue.length());
 
         } else {
 
-            fibonacciSequence.append(fibonacci(n));
+            fibonacciValue.append(fibonacci(n));
         }
-
-        System.out.printf(((sequence) ? "Fibonacci Sequence:" : "Fibonacci Number:") + " %s.%n", fibonacciSequence);
+        
+        System.out.printf(((sequence) ? "Fibonacci Sequence:" : "Fibonacci Number:") + " %s.%n", fibonacciValue);
         System.out.printf("Time: %s second(s) and %s millisecond(s).%n", TIME[0], TIME[1]);
     }
-    
+
     private static BigInteger fibonacci(long n) {
 
         if (n <= 1) return BigInteger.valueOf(n);
