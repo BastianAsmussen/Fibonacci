@@ -1,5 +1,5 @@
 # Fibonacci Calculator 🧮
-Fibonacci calculator in Java 17. The Big O notation is **O(n)** but it feels like **O(1)** when requesting fibonacci numbers smaller than 10,000.
+Fibonacci calculator in Java 17. The Big O notation is **O(n)** but it feels like **O(1)** when requesting fibonacci numbers smaller than 10,000.  
 Click <a href="https://github.com/BastianAsmussen/Fibonacci/blob/main/out/artifacts/Fibonacci_jar/Fibonacci.jar?raw=true">**here**</a> to download the jar.
 
 <hr/>
