@@ -61,11 +61,8 @@ public class Main {
 
             fibonacciValue.delete(fibonacciValue.length() - 2, fibonacciValue.length());
 
-        } else {
-
-            fibonacciValue.append(fibonacci(n));
-        }
-
+        } else fibonacciValue.append(fibonacci(n));
+        
         System.out.printf(((sequence) ? "Fibonacci Sequence:" : "Fibonacci Number:") + " %s.%n", fibonacciValue);
         System.out.printf("Time: %s second(s) and %s millisecond(s).%n", TIME[0], TIME[1]);
     }
